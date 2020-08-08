@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimizing CSS for faster page loads</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/3d481c9751.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        window.onload = function () {
+            if (localStorage.getItem('color-mode') === 'dark' ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches &&
+                    !localStorage.getItem('color-mode'))
+            ) {
+                document.documentElement.setAttribute('color-mode', 'dark');
+                document.querySelector(".switch-input").checked = false;
+            }
+        }
+    </script>
+
+    <label class="switch">
+        <input type="checkbox" onclick="myFunction()" class="switch-input" checked>
+        <span class="switch-label" data-on="Light" data-off="Dark"></span>
+        <span class="switch-handle"></span>
+    </label>
+    <div class="navbar">
+        <div class="left">
+            <a href="#" class="brand">Aaron Soto</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul>
+                <li><i class="fab fa-codepen"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-linkedin-in"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="blog-post-title">
+                <h1>Optimizing CSS for <br>faster page loads</h1>
+            </div>
+            <div class="tags-date">
+                <div class="tags">
+                    <span>Performance</span>
+                    <span>Front-end</span>
+                    <span>CSS</span>
+                </div>
+                <div class="date">
+                    <p>Published on August 2, 2020</p>
+                    <p>~7 min reading time</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-body">
+
+        <div class="color-picker">
+            <h3 class="color-picker-title">Colors Used</h3>
+            <div class="colors">
+                <div class="color" style="color:#07778f" data-clipboard-text="#07778f">
+                    <span>#07778f</span>
+                    <div class="color-swatch"></div>
+                </div>
+                <div class="color" style="color:#e2dfb9" data-clipboard-text="#e2dfb9">
+                    <span>#e2dfb9</span>
+                    <div class="color-swatch"></div>
+                </div>
+                <div class="color" style="color:#e2763c" data-clipboard-text="#e2763c">
+                    <span>#e2763c</span>
+                    <div class="color-swatch"></div>
+                </div>
+                <div class="color" style="color:#e72d33" data-clipboard-text="#e72d33">
+                    <span>#e72d33</span>
+                    <div class="color-swatch"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-text">
+            <h2 class="text-title" id="animatingSVG">Animating SVG <a href="#animatingSVG">#</a></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sed, harum labore laborum quod eius? <a
+                    href="#" class="text-link">Doloremque blanditiis</a>, fuga. Eveniet laborum porro, quas itaque fuga
+                <span id="highlight">molestiae numquam sint</span> fugit accusantium expedita minima cum pariatur quo
+                nobis quae, distinctio totam consequatur beatae <strong>aperiam</strong> ab ratione blanditiis error
+                reprehenderit. Accusamus repudiandae perferendis quos reiciendis iure illum omnis facere tempore itaque
+                quas doloribus minima assumenda velit qui <a href="#" class="text-link">doloremque</a> numquam alias, in
+                quae dolorum! Explicabo obcaecati
+                placeat, nulla eius neque iste saepe, dolorum quibusdam, vel quam voluptates fugiat vitae quod mollitia
+                distinctio? Labore odio <code>body</code> cum, ad itaque iste eligendi modi sit voluptatibus natus
+                delectus ipsam?</p>
+
+
+            <div class="code">
+                <div class="line"><span class='red'>code</span>{</div>
+                <div class="line tab"><span class='green'>font-family</span>: monospace;</div>
+                <div class="line">}</div>
+            </div>
+
+            <div class="note">
+                <p>There are more studies confirming this pattern. I used an example from the study mentioned above
+                    because it's the most recent one I could find.</p>
+            </div>
+
+            <img src="photo-1.png" class="photo-1" alt="">
+            <figcaption>Waterfall chart for projects page with critical CSS.</figcaption>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, quisquam in quo repellat nam
+                ducimus expedita aut nulla neque maxime eveniet laudantium cupiditate! Similique, ex ut, animi atque,
+                enim error iusto commodi qui perferendis quas beatae! Velit alias sed iste eveniet libero doloribus
+                voluptates quae ad rem quos harum autem totam dolores ex, quis, officia rerum quibusdam sunt numquam
+                asperiores sint, <span class="strong-slant">View > View As</span> illum
+                qui mollitia rem deleniti maxime,
+                rerum placeat expedita hic tenetur reprehenderit dolor illo odio quo commodi et reiciendis blanditiis
+                fuga quia quod sit! Rem natus itaque labore aliquam quaerat possimus obcaecati totam dolores sed
+                doloribus reprehenderit unde maxime culpa inventore fuga molestiae, quas nobis pariatur eligendi magni
+                aut harum modi voluptatem. Porro velit animi sequi libero quibusdam dolor delectus. Corrupti facilis,
+                iusto dolores nihil dolorem delectus fugit ipsum at minima cupiditate. Autem expedita suscipit enim
+                saepe similique, nostrum ut, facilis exercitationem commodi nesciunt quod molestias numquam eos maxime
+                officia ullam architecto recusandae, vero voluptatibus dolores facere totam! A, non possimus repellat
+                maiores nam dolores. Eos, nemo voluptatum officia nulla, quae iste neque voluptatibus fugiat sunt,
+                aliquid ipsum nam unde dolor! Laboriosam rerum soluta ullam aspernatur aperiam cumque facilis
+                dignissimos nihil consectetur?
+            </p>
+
+            <p class="text-tip">Activate ‘Use fill’ on the Pen Tool Toolbar to add fill colours as you draw.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere explicabo neque, nemo quaerat natus,
+                eveniet expedita nihil consequatur sed dignissimos id ipsum totam voluptatum provident quasi? Aperiam
+                saepe qui illum architecto impedit. Quibusdam non vel totam consequuntur vitae in, labore error placeat
+                ut eius soluta aspernatur officia quidem hic quisquam quo ipsam eaque, dolore itaque deleniti iusto?
+                Molestiae ex, excepturi, quos cupiditate hic dignissimos corporis consequuntur mollitia maiores nisi
+                blanditiis. Esse vero veritatis quaerat eius eaque architecto dignissimos impedit quos nostrum
+                quibusdam, et odit laborum. Mollitia culpa eaque incidunt voluptatem eius, pariatur labore eligendi.
+                Magnam eos consectetur voluptatibus totam. Necessitatibus, libero obcaecati tempora in ipsum laboriosam
+                perferendis voluptate voluptas, autem fugit reiciendis? Veritatis odit sunt ipsam aspernatur culpa
+                temporibus quam magnam, qui eius nulla ipsa eligendi asperiores quasi consectetur maxime eum nostrum
+                repellat voluptates amet. Hic adipisci officiis ut, ipsa accusamus, quae facere odit, quis vitae nihil
+                quasi porro sunt.</p>
+
+            <div class="divider"></div>
+
+            <h2 class="text-title" id="hardway">the hard way<a href="#animatingSVG">#</a></h2>
+
+            <p class='last-p'>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil illo quidem incidunt voluptatibus
+                magni, perferendis est modi esse, non beatae nostrum dicta consequuntur dolor delectus fugit! Pariatur
+                harum omnis, nihil explicabo alias, dicta blanditiis veniam accusantium ad et repellat aliquid quo sequi
+                similique! Illo autem quidem aspernatur quas itaque modi voluptas, temporibus animi dolores eius
+                consectetur consequuntur! Quae voluptatem adipisci qui voluptatibus, dolor autem, obcaecati mollitia
+                perspiciatis provident accusantium maxime excepturi ipsa, et nemo dolorem facilis repellat. Expedita
+                odio officia fugit est aliquam asperiores voluptatibus. Quas eum ex impedit exercitationem saepe
+                voluptas reprehenderit molestias in doloribus illum eius blanditiis, porro libero inventore consectetur
+                omnis similique laudantium! Asperiores, earum assumenda! Deserunt, architecto eaque. Nihil sit sint
+                natus. Quidem, tempore earum.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Aaron Soto © 2020</p>
+            <p>Made by hand by me, thank you for stopping by!</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
